@@ -6,14 +6,15 @@ import video_excel
 import image_excel
 import zip_excel
 import mlumourl_excel
-import content_excel  # <--- 第1处：新增导入
+import content_excel
+import extend_excel
 
 class MainApp(TkinterDnD.Tk):
     def __init__(self):
         super().__init__()
-        self.title("全能Excel转换工具 v3.0_2026-06-01")
-        self.geometry("720x890")
-        self.resizable(False, False)
+        self.title("全能Excel转换工具 v3.1_2026-06-10")
+        self.geometry("790x860")
+        self.resizable(False, False) # (宽是否可拖动缩放, 高是否可拖动缩放)
 
         # 全局样式
         style = ttk.Style()
@@ -24,12 +25,13 @@ class MainApp(TkinterDnD.Tk):
         notebook = ttk.Notebook(self)
         notebook.pack(fill="both", expand=True, padx=10, pady=10)
 
-        # 按顺序添加标签：视频 → 图片 → ZIP → URL → 文案转Excel
+        # 按顺序添加标签：视频 → 图片 → ZIP → URL → 文案转Excel → 拓展文件转Excel
         video_excel.VideoExcelTab(notebook)
         image_excel.ImageExcelTab(notebook)
         zip_excel.ZipExcelTab(notebook)
         mlumourl_excel.UrlExcelTab(notebook)
-        content_excel.ContentExcelTab(notebook)  # <--- 第2处：新增标签页
+        content_excel.ContentExcelTab(notebook)
+        extend_excel.ExtendExcelTab(notebook)
 
 if __name__ == "__main__":
     try:

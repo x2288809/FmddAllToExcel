@@ -5,6 +5,8 @@
 
 # 环境
 
+python3.11，Win10  
+
 安装依赖
 
 ```
@@ -30,3 +32,8 @@ pyinstaller -F -w -n 202605全能转换Excel --noconsole --exclude-module=ctypes
 pyinstaller -F -w -n 全能转换Excel --noconsole --icon=favicon.ico --exclude-module=ctypes --exclude-module=asyncio app.py --additional-hooks-dir=.
 ```
 
+# 版本更新  
+
+V3.1 2026-06-10
+1. 增加拓展版表格的导入操作；
+2. 优化 ZIP文件夹转Excel 功能，支持12张图片的拓展版转换

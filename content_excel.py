@@ -96,8 +96,8 @@ class ContentExcelTab:
         ttk.Button(frame_path, text="选择文件", command=self.select_file).pack(side="left", padx=5)
 
         # 拖拽区域
-        drop_frame = ttk.LabelFrame(self.tab, text="👇 拖拽文件到这里", padding=20)
-        drop_frame.pack(fill="both", expand=True, padx=30, pady=15)
+        drop_frame = ttk.LabelFrame(self.tab, text="👇 拖拽文件到这里", padding=10)
+        drop_frame.pack(fill="both", expand=True, padx=30, pady=8)
         self.drop_label = ttk.Label(drop_frame, text="拖入 .txt / .docx 文件",
                                    font=("微软雅黑", 12), foreground="#409eff")
         self.drop_label.pack(expand=True, fill="both")
